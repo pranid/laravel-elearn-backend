@@ -25,5 +25,6 @@ Route::post('get-cities','CommonController@getCities');
 Route::middleware('auth:api')->group(function () {
     Route::post('logout', 'AuthController@logout');
     Route::post('get-user-details', 'AuthController@details');
+    Route::post('get-course-details', 'CommonController@getCourseOptions');
 });
 

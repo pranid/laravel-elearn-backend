@@ -45,4 +45,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo(SlPostalCode::class, 'city_id');
     }
+
+    public function userCourseOptions()
+    {
+        return $this->hasMany(UserCourseOption::class, 'user_id');
+    }
 }
